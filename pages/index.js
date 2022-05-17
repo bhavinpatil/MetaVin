@@ -2,7 +2,6 @@ import { Button } from '@chakra-ui/button'
 import { Box, Flex, Text} from '@chakra-ui/layout'
 import { Tabs, TabList, Tab, TabPanels, TabPanel } from '@chakra-ui/react'
 import Head from 'next/head'
-import Image from 'next/image'
 import { useMoralis } from 'react-moralis'
 import Balance from '../components/Balance'
 import Header from '../components/Header'
@@ -45,7 +44,6 @@ export default function Home() {
               <Tab fontWeight="bold" color="white">Profile</Tab>
               <Tab fontWeight="bold" color="white">Balance</Tab>
               <Tab fontWeight="bold" color="white">Transactions</Tab>
-              <Tab fontWeight="bold" color="white">NFTs</Tab>
               <Tab fontWeight="bold" color="white">Send ETH</Tab>
               <Tab fontWeight="bold" color="white">Swap</Tab>
             </TabList>
@@ -60,13 +58,10 @@ export default function Home() {
                 <Transactions user={user}/>
               </TabPanel>
               <TabPanel>
-                <Nft user={user}/>
-              </TabPanel>
-              <TabPanel>
                 <Send/>
               </TabPanel>
               <TabPanel>
-                <Swap />
+                <Swap user={user}/>
               </TabPanel>
             </TabPanels>
           </Tabs>
