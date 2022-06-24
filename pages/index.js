@@ -5,10 +5,9 @@ import Head from 'next/head'
 import { useMoralis } from 'react-moralis'
 import Balance from '../components/Balance'
 import Header from '../components/Header'
-import Nft from '../components/Nft'
 import Profile from '../components/profile'
 import Send from '../components/Send'
-import Swap from '../components/Swap'
+// import Swap from '../components/Swap'
 import Transactions from '../components/Transactions'
 
 export default function Home() {
@@ -45,7 +44,7 @@ export default function Home() {
               <Tab fontWeight="bold" color="white">Balance</Tab>
               <Tab fontWeight="bold" color="white">Transactions</Tab>
               <Tab fontWeight="bold" color="white">Send ETH</Tab>
-              <Tab fontWeight="bold" color="white">Swap</Tab>
+              {/* <Tab fontWeight="bold" color="white">Swap</Tab> */}
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -60,9 +59,9 @@ export default function Home() {
               <TabPanel>
                 <Send/>
               </TabPanel>
-              <TabPanel>
+              {/* <TabPanel>
                 <Swap user={user}/>
-              </TabPanel>
+              </TabPanel> */}
             </TabPanels>
           </Tabs>
         </Box>

@@ -1,7 +1,7 @@
 import { Divider, Text } from "@chakra-ui/layout";
 import Moralis from "moralis";
 import { useEffect, useState } from "react";
-import { useERC20Balances, useMoralis, useMoralisWeb3Api } from "react-moralis";
+import { useERC20Balances, useMoralisWeb3Api } from "react-moralis";
 import CustomContainer from "./CustomContainer";
 
 export default function Balance({ user }) {
@@ -17,7 +17,7 @@ export default function Balance({ user }) {
             address: user.get('ethAddress')
         }).catch(e => console.log(e))
         if (result.balance) {
-            setEthBalance(Moralis.Units.FromWei(result.balance))
+            setEthBalance(Moralis.Units.FromWei(result.balance))    
         }
     }
 
